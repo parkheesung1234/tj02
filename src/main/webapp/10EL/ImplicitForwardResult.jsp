@@ -19,7 +19,7 @@
 		<li>세션 영역 : ${ sessionScope.scopeValue }</li>
 		<li>애플리케이션 영역 : ${ applicationScope.scopeValue }</li>
 	</ul>
-	<!-- 표현식으로 출력할 경우 null이 화면에 ㅊ ㅜㄹ력된다. -->
+	<!-- 표현식으로 출력할 경우 null이 화면에 출력된다. -->
 	<%= pageContext.getAttribute("scopeValue") %>
 	
 	<!-- 
