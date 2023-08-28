@@ -32,7 +32,7 @@ forTokens 태그 : 문자열에서 특정 구분자를 통해 반환된 배열�
 	out.println("토큰 수 : " + tokens.countTokens() + "<br/>");
 	while(tokens.hasMoreTokens()){
 		String token = tokens.nextToken();
-		out.println(token + "<br/>");
+		out.println(token + "<br/>"); 
 	}
 	%>
 	<h4>String 클래스의 split() 메서드 사용</h4>
