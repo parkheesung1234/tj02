@@ -41,6 +41,7 @@
 <c:choose>
 	<c:when test="${ empty boardLists }">
 <!-- 게시물이 없을 때 -->
+<!-- choose와 when 사이에는 html문이 들어가면 안된다. -->
         <tr>
             <td colspan="6" align="center">
                 등록된 게시물이 없습니다^^*
@@ -48,6 +49,11 @@
         </tr>
 	</c:when>
 	<c:otherwise>
+	<!--
+	확장 for문 형태로 List에 저장된 레코드를 반복 출력한다.
+	items속성에는 반복가능한 객체를 기술하고, 순서대로 추출된 데이터는
+	var속성에 지정한 변수로 입력된다.
+	 -->
 		<c:forEach items="${ boardLists }" var="row" varStatus="loop">
 <!-- 출력할 게시물이 있을때 -->           
         <tr align="center">
