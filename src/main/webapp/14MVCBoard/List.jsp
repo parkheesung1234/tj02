@@ -69,8 +69,12 @@
             <td>${ row.visitcount }</td>
             <td>${ row.postdate }</td>
             <td>
-            	<a href="../mvcboard/download.do?ofile=${ row.ofile }
-            	&sile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
+            <!-- 
+            첨부한 파일이 있는 경우에만 다운로드 링크를 출력한다.
+            해당 링크의 파라미터는 원본파일명, 저장된 파일명, 일련번호 3개로
+            구성된다.
+             -->
+            	<a href="../mvcboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
             </td>
         </tr>
 		</c:forEach>

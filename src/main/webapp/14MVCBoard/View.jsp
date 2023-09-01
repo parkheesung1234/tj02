@@ -29,14 +29,19 @@
     </tr>
     <tr>
         <td>내용</td>
-        <td colspan="3" height="100">${ dto.content }</td>
+        <td colspan="3" height="100">
+        	${ dto.content }
+        	<<c:if test="${ not empty dto.ofile and isImage eq true }">
+        		<br><img src="../Uploads/${ dto.sfile }" style="max-width:100%;" />
+        	</c:if>
+        </td>
     </tr> 
     <tr>
         <td>첨부파일</td>
         <td>        
         	<c:if test="${ not empty dto.ofile }">
 			${ dto.title }
-			<a href="../mvcboard/download.do?ofile=${ dto.ofile }&sile=${ dot.sfile}&idx=${ dto.idx}">
+			<a href="../mvcboard/download.do?ofile=${ dto.ofile }&sfile=${ dto.sfile}&idx=${ dto.idx}">
             [다운로드]            
 			</a>        	
         	</c:if>    
