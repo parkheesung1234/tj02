@@ -127,7 +127,7 @@ public class BoardDAO extends JDBConnect{
 			   + " WHERE rNum BETWEEN ? AND ?";
 		
 		try {
-			//인파라미터가 있는 쿼리무능로 prepared객체 생성
+			//인파라미터가 있는 쿼리문으로 prepared객체 생성
 			psmt = con.prepareStatement(query);
 			//인파라미터 설정
 			psmt.setString(1, map.get("start").toString());
